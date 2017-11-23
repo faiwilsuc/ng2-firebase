@@ -1,0 +1,15 @@
+.login-background {
+  padding: 20px;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/0a/8d/42/0a8d42aadffb455cd54a1db2f557c9df.jpg);
+}
+
+.login-content {
+  display: inline-block;
+  padding: 10px 0 35px 0;
+  width: 276px;
+  background-color: white;
+}
+
+[type="checkbox"]+label {
+  margin-left: 30px;
+}

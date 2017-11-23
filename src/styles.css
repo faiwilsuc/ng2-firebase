@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.center-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+
+.center-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.input-field input[type=search] {
+  padding-left: 3rem;
+  padding-right: 2rem;
+  width: calc(100% - 5rem);
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 30px;
+  left: 30px;
+}
+
+.nav-buttons {
+  position: relative;
+  padding-top: 1.5rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.brand-logo {
+  font-size: 16px !important;
+}
+
+.contact-chip {
+  height: 48px;
+  line-height: 48px;
+}
+
+.message-modal {
+  max-height: 80%;
+  overflow: auto;
+}
+
+.contact-image {
+  background-color: #1e88e5;
+}
+
+@media screen and (max-width: 425px) {
+  .modal-content {
+    padding: 20px 12px !important;
+  }
+}
+
+nav {
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+nav i {
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+nav a {
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+nav .mobile-profile-img {
+  height: 36px;
+  margin-top: 6px;
+}
+
+a, h1, h2, h3, h4, h5 {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}

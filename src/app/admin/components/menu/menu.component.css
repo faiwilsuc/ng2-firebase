@@ -1,0 +1,15 @@
+.menu-container {
+  height: 100%;
+}
+
+.center-wrapper {
+  max-height: calc(100% - 52px);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 993px) {
+  .center-wrapper {
+    max-height: calc(100% - 136px);
+  }
+}

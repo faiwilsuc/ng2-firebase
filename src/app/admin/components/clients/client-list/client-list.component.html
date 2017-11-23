@@ -1,0 +1,50 @@
+<div class="client-list-container">
+
+  <nav class="hide-on-large-only">
+    <div class="nav-wrapper">
+      <a class="brand-logo center">Listă clienți</a>
+      <ul id="nav-mobile" class="left">
+        <li><a (click)="onBackPressed()"><i class="material-icons">navigate_before</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row no-margin-bottom">
+    <div class="col s12">
+
+      <div class="row no-margin-bottom">
+        <div class="col s12 nav-buttons hide-on-med-and-down">
+          <div class="col s4 left-align">
+            <button class="btn waves-effect" (click)="onBackPressed()">Înapoi</button>
+          </div>
+          <div class="col s4 center-align">
+            <h3>Listă clienți</h3>
+          </div>
+          <div class="col s4 right-align">
+            <button class="btn waves-effect" (click)="onAddClient()">Adaugă client</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row no-margin-bottom">
+        <div class="input-field col s12">
+          <input id="client-search" type="search" [(ngModel)]="filterString">
+          <label class="label-icon" for="client-search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </div>
+
+      <div class="row no-margin-bottom">
+        <app-client-item *ngFor="let client of clients | filter:filterString:filterProps" [client]="client"></app-client-item>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fixed-action-btn hide-on-large-only">
+    <a class="btn-floating waves-effect" (click)="onAddClient()">
+      <i class="medium material-icons">add</i>
+    </a>
+  </div>
+
+</div>

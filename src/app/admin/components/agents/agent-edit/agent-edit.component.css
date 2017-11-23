@@ -1,0 +1,31 @@
+.agent-edit-container {
+  height: 100%;
+}
+
+.agent-edit-content {
+  display: inline-block;
+  width: 320px;
+}
+
+.agent-edit-title {
+  margin-bottom: calc(20px + 1.5rem);
+}
+
+.center-wrapper {
+  height: calc(100% - 52px);
+  padding-top: calc(20px + 1.5rem);
+  padding-bottom: calc(20px + 1.5rem);
+}
+
+@media screen and (min-width: 993px) {
+  .center-wrapper {
+    padding-top: 0;
+    height: calc(100% - 86px);
+  }
+}
+
+@media screen and (max-width: 320px){
+  .agent-edit-content {
+    width: 100%;
+  }
+}

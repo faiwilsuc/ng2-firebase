@@ -1,0 +1,45 @@
+<div id="send-message-modal" class="modal message-modal" materialize="modal" [materializeParams]="[{ dismissible: true }]"
+     [materializeActions]="messageModalActions">
+  <div class="modal-content">
+    <div class="row hide-on-small-and-down" style="margin-bottom: 2.5rem">
+      <div class="col m8 left-align">
+        <h5 style="margin-top: 0.75rem">Trimite un mesaj</h5>
+      </div>
+      <div class="col m4 right-align contact-chip">
+        <div class="chip">
+          <img class="contact-image" src="/assets/icons/warehouses.png" alt="Contact utilizator">{{ messageReceiver.name }}
+        </div>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="col s12 center-align">
+        <h5 style="margin-top: 0.75rem">Trimite un mesaj</h5>
+      </div>
+      <div class="col s12 left-align">
+        <div class="chip" style="margin-top: 1.5rem">
+          <img class="contact-image" src="/assets/icons/warehouses.png" alt="Contact utilizator">{{ messageReceiver.name }}
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="messageForm">
+      <div class="row">
+        <div class="input-field col s12">
+          <input materialize="characterCounter" id="subject" type="text" class="validate"
+                 data-length="64" formControlName="subject">
+          <label for="subject">Subiect</label>
+        </div>
+      </div>
+      <div class="row no-margin-bottom">
+        <div class="input-field col s12">
+          <textarea materialize="characterCounter" id="body" class="materialize-textarea validate"
+                    data-length="2048" formControlName="body"></textarea>
+          <label for="body">Mesaj</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect btn-flat">Renunță</a>
+    <a class="modal-action waves-effect btn-flat" (click)="onSendMessage()">Trimite</a>
+  </div>
+</div>

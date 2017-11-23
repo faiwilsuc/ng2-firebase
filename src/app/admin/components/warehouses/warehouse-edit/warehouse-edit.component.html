@@ -1,0 +1,82 @@
+<div id="new-user-modal" class="modal" materialize="modal" [materializeParams]="[{ dismissible: false }]"
+     [materializeActions]="loginModalActions">
+  <div class="modal-content">
+    <h4 style="margin-bottom: 30px">Login information</h4>
+    <p>{{ loginInformation }}</p>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-green btn-flat" (click)="closeModal()">Danke</a>
+  </div>
+</div>
+
+<div class="warehouse-edit-container">
+
+  <nav class="hide-on-large-only">
+    <div class="nav-wrapper">
+      <a class="brand-logo center">{{ editMode ? 'Modifică depozitul' : 'Depozit nou' }}</a>
+      <ul id="nav-mobile" class="left">
+        <li><a (click)="onBackPressed()"><i class="material-icons">navigate_before</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row no-margin-bottom">
+    <div class="col s12">
+
+      <div class="row no-margin-bottom">
+        <div class="col s12 nav-buttons hide-on-med-and-down">
+          <div class="col s3 left-align">
+            <button class="btn waves-effect" (click)="onBackPressed()">Înapoi</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="center-wrapper">
+    <div class="center-content">
+
+      <div class="warehouse-edit-content">
+
+        <h4 class="warehouse-edit-title hide-on-med-and-down">{{ editMode ? 'Modifică depozitul' : 'Depozit nou' }}</h4>
+        <form [formGroup]="warehouseForm" (ngSubmit)="onSubmit()">
+          <div class="row no-margin-bottom">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="name" type="text" class="validate" formControlName="name">
+                  <label for="name">Nume</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate" formControlName="email">
+                  <label for="email" data-error="Adresa de email este invalidă">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="location" type="text" class="validate" formControlName="location">
+                  <label for="location">Localitate</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="phoneNumber" type="text" class="validate" pattern="[0]+[7]+\d{8}"
+                         formControlName="phoneNumber">
+                  <label for="phoneNumber" data-error="Număr de telefon invalid">Telefon</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="waves-effect btn" [disabled]="!warehouseForm.valid">{{ editMode ?
+            'Salvează' : 'Adaugă' }}<i class="material-icons right">send</i></button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

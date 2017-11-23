@@ -1,0 +1,91 @@
+<div class="menu-container">
+
+  <nav class="hide-on-large-only">
+    <div class="nav-wrapper">
+      <a class="brand-logo center">Panou admin</a>
+      <ul id="nav-mobile-left" class="left">
+        <li><a (click)="onLogout()"><i class="material-icons">exit_to_app</i></a></li>
+      </ul>
+      <ul id="nav-mobile-right" class="right">
+        <li><a onclick="Materialize.toast('This feature will be added soon :)', 5000)" (click)="onUserProfile()"><img class="circle mobile-profile-img" src="/assets/yuna.jpg"></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row no-margin-bottom">
+    <div class="col s12">
+
+      <div class="row no-margin-bottom">
+        <div class="col s12 nav-buttons hide-on-med-and-down">
+          <div class="col s4 left-align">
+            <button class="btn waves-effect" (click)="onLogout()">Deconectare</button>
+          </div>
+          <div class="col s4 center-align">
+            <h3>Panou admin</h3>
+          </div>
+          <div class="col s4 right-align">
+            <button class="btn waves-effect" onclick="Materialize.toast('This feature will be added soon :)', 5000)" (click)="onUserProfile()">Profilul meu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-wrapper">
+    <div class="center-content">
+      <div class="row no-margin-bottom">
+        <div class="col s12 m10 l8 xl6 offset-m1 offset-l2 offset-xl3">
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./warehouses">
+                <img src="/assets/icons/warehouses.png">
+                <h5 class="card-title-styling">Depozite</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./agents">
+                <img src="/assets/icons/agents.png">
+                <h5 class="card-title-styling">Agenți</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./clients">
+                <img src="/assets/icons/clients.png">
+                <h5 class="card-title-styling">Clienți</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./messages">
+                <img src="/assets/icons/messages.png">
+                <h5 class="card-title-styling">Mesaje</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./statistics">
+                <img src="/assets/icons/statistics.png">
+                <h5 class="card-title-styling">Statistici</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image waves-effect waves-block" routerLink="./orders">
+                <img src="/assets/icons/orders.png">
+                <h5 class="card-title-styling">Comenzi</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

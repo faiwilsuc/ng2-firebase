@@ -1,0 +1,35 @@
+<div class="center-wrapper login-background">
+  <div class="center-content">
+    <div class="login-content z-depth-4">
+      <h3><a routerLink="/">Bun venit</a></h3>
+      <p style="margin-bottom: 30px;">Completeaza detaliile de login</p>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="row no-margin-bottom">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" name="email" ngModel required email>
+                <label for="email" data-error="Adresa de email este invalidă">Adresa de email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate" name="password" ngModel required>
+                <label for="password">Parola</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p>
+                  <input type="checkbox" class="filled-in" id="keep-session" name="session" ngModel/>
+                  <label for="keep-session">Păstrează sesiunea</label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="waves-effect waves-teal btn" style="margin-top: 10px;" [disabled]="!loginForm.valid">Intra in cont<i class="material-icons right">send</i></button>
+      </form>
+    </div>
+  </div>
+</div>

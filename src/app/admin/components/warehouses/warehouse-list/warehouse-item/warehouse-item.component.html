@@ -1,0 +1,18 @@
+<div class="col s12 m6 l4 xl3">
+  <div class="card hoverable" [ngStyle]="{ 'background-color': backgroundColor, 'color': textColor }">
+    <div class="card-content waves-effect" style="cursor: pointer" (click)="onWarehouseDetails()">
+      <h5 class="card-name">{{ warehouse.name }}</h5>
+      <div class="card-description">
+        <blockquote>Email: {{ warehouse.email }}</blockquote>
+        <blockquote>Telefon: {{ warehouse.phoneNumber }}</blockquote>
+        <blockquote class="no-margin-bottom">Localitate: {{ warehouse.location }}</blockquote>
+      </div>
+    </div>
+    <div class="card-action">
+      <a class="btn-floating halfway-fab waves-effect hide-on-med-and-down" (click)="onEditWarehouse()"><i class="material-icons">edit</i></a>
+      <a style="cursor: pointer" (click)="onMessageWarehouse()">Mesaj</a>
+      <a class="hide-on-med-and-down" style="cursor: pointer" (click)="onWarehouseDetails()">Detalii</a>
+      <a class="hide-on-large-only" style="cursor: pointer" (click)="onEditWarehouse()">Modifică</a>
+    </div>
+  </div>
+</div>

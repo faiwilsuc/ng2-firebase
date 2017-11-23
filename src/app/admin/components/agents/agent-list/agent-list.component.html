@@ -1,0 +1,50 @@
+<div class="agent-list-container">
+
+  <nav class="hide-on-large-only">
+    <div class="nav-wrapper">
+      <a class="brand-logo center">Listă agenți</a>
+      <ul id="nav-mobile" class="left">
+        <li><a (click)="onBackPressed()"><i class="material-icons">navigate_before</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row no-margin-bottom">
+    <div class="col s12">
+
+      <div class="row no-margin-bottom">
+        <div class="col s12 nav-buttons hide-on-med-and-down">
+          <div class="col s4 left-align">
+            <button class="btn waves-effect" (click)="onBackPressed()">Înapoi</button>
+          </div>
+          <div class="col s4 center-align">
+            <h3>Listă agenți</h3>
+          </div>
+          <div class="col s4 right-align">
+            <button class="btn waves-effect" (click)="onAddAgent()">Adaugă agent</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row no-margin-bottom">
+        <div class="input-field col s12">
+          <input id="agent-search" type="search" [(ngModel)]="filterString">
+          <label class="label-icon" for="agent-search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </div>
+
+      <div class="row no-margin-bottom">
+        <app-agent-item *ngFor="let agent of agents | filter:filterString:filterProps" [agent]="agent"></app-agent-item>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fixed-action-btn hide-on-large-only">
+    <a class="btn-floating waves-effect" (click)="onAddAgent()">
+      <i class="medium material-icons">add</i>
+    </a>
+  </div>
+
+</div>
